@@ -35,7 +35,7 @@
 // ==/UserScript==
 
 (function() {
-  // Block all writes to the page so it doesn’t load normally
+
   document.write = () => {};
   document.writeln = () => {};
 
@@ -43,10 +43,10 @@
   try {
     document.documentElement.innerHTML = '';
   } catch (e) {
-    // Some browsers might error here.
+    // Some browsers might error here i think
   }
 
-  // Waiting...
+  // Waiting..
   window.addEventListener('DOMContentLoaded', () => {
     // Remove any residual content
     document.body.innerHTML = '';
